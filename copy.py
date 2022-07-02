@@ -31,19 +31,19 @@ def math_operation():
 def math_operation_via_postman():
     if (request.method=='POST'):
         operation=request.json['operation']
-        n1=int(request.json['num1'])
-        n2 = int(request.json['num2'])
+        num1=int(request.json['num1'])
+        num2 = int(request.json['num2'])
         if(operation=='add'):
-            r=n1+ n2 
+            r=num1+num2
             result= 'the sum of '+str(num1)+' and '+str(num2) +' is '+str(r)
         if (operation == 'subtract'):
-            r = n1- n2 
+            r = num1 - num2
             result = 'the difference of ' + str(num1) + ' and ' + str(num2) + ' is ' + str(r)
         if (operation == 'multiply'):
-            r = n1* n2 
+            r = num1 * num2
             result = 'the product of ' + str(num1) + ' and ' + str(num2) + ' is ' + str(r)
         if (operation == 'divide'):
-            r = n1/ n2 
+            r = num1 / num2
             result = 'the quotient when ' + str(num1) + ' is divided by ' + str(num2) + ' is ' + str(r)
         return jsonify(result)
 
